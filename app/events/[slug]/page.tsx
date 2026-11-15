@@ -7,6 +7,8 @@ import { getEvent, getEvents } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getEvents().map((e) => ({ slug: e.slug }));
 }

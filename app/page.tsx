@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HeroBlocks } from "@/components/hero-blocks";
+import { TimelineScroller } from "@/components/timeline-scroller";
 import {
   ACCENT_BG,
   ACCENT_SOFT,
@@ -261,26 +262,28 @@ export default function HomePage() {
           <SectionHeading index="04" label="git log" title={<>From GDSC to Gen {site.generation}.</>}>
             A short commit history of the chapter, from the first post in September {site.foundedYear} to today.
           </SectionHeading>
-        </div>
-
-        <div className="overflow-x-auto pb-5 [scrollbar-width:thin]">
-          <ol className="wrap flex w-max min-w-full gap-5 !max-w-none md:!px-[max(2rem,calc((100vw-var(--wrap))/2+2rem))]">
-            {timeline.map((m, i) => (
-              <li key={m.date + m.tag} className="relative w-60 shrink-0 pt-7">
-                <span className="absolute left-0 right-[-1.25rem] top-[0.55rem] h-0.5 bg-ink" aria-hidden="true" />
-                <span
-                  className={`absolute left-0 top-0 h-5 w-5 rounded-md border-2 border-ink ${ACCENT_BG[m.color]}`}
-                  aria-hidden="true"
-                />
-                <p className="mono mt-3 text-xs uppercase tracking-wider text-muted">
-                  <span className="text-ink">{formatMonth(m.date)}</span> · {m.tag}
-                </p>
-                <h3 className="display mt-2 text-xl !leading-[1.08]">{m.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{m.text}</p>
-                <p className="mono mt-3 text-[0.65rem] text-ink/30">commit {String(i + 1).padStart(2, "0")}</p>
-              </li>
-            ))}
-          </ol>
+          <TimelineScroller>
+            <ol className="flex w-max min-w-full gap-6 pr-2">
+              {timeline.map((m, i) => (
+                <li key={m.date + m.tag} className="group relative w-60 shrink-0 pt-7 sm:w-64">
+                  <span
+                    className="absolute left-0 right-[-1.5rem] top-[9px] h-0.5 bg-ink group-last:right-0"
+                    aria-hidden="true"
+                  />
+                  <span
+                    className={`absolute left-0 top-0 h-5 w-5 rounded-md border-2 border-ink ${ACCENT_BG[m.color]}`}
+                    aria-hidden="true"
+                  />
+                  <p className="mono mt-3 text-xs uppercase tracking-wider text-muted">
+                    <time dateTime={m.date} className="text-ink">{formatMonth(m.date)}</time> · {m.tag}
+                  </p>
+                  <h3 className="display mt-2 text-xl !leading-[1.08]">{m.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{m.text}</p>
+                  <p className="mono mt-3 text-[0.65rem] text-muted">commit {String(i + 1).padStart(2, "0")}</p>
+                </li>
+              ))}
+            </ol>
+          </TimelineScroller>
         </div>
       </section>
 

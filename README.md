@@ -7,8 +7,26 @@ Landing site for Google Developer Group on Campus at VinUniversity. Built with N
 ```bash
 bun install
 bun dev        # http://localhost:3000
-bun run build  # production build
+bun run build  # static production build in out/
 ```
+
+## Deploy to Cloudflare Pages
+
+Use these build settings in the Cloudflare Pages project:
+
+- Framework preset: **Next.js (Static HTML Export)**
+- Build command: `bun run build`
+- Build output directory: `out`
+- Root directory: the repository root
+
+`next.config.ts` enables `output: "export"`, so the build generates HTML, CSS,
+JavaScript, and images in `out/`. Upload this directory to Pages. The build does
+not require a Next.js server or Pages Functions. `next start` does not serve a
+static export; use `bun dev` for local development.
+
+All article and event URLs are generated from repository content at build time;
+adding or changing content requires a new deployment. Images are served directly
+from `public/` without the Next.js image optimization endpoint.
 
 ## Routes
 

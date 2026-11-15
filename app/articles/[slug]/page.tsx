@@ -6,6 +6,8 @@ import { getArticle, getArticles } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getArticles().map((a) => ({ slug: a.slug }));
 }
