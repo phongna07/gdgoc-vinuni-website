@@ -19,7 +19,7 @@ export default function EventsPage() {
         Everything we have hosted, co-organised or shown up for since {site.foundedYear}. Open any event for the
         recap and photos.
       </PageHeader>
-      <section className="wrap mt-12">
+      <section className="wrap mt-10">
         <EventsExplorer events={events} types={types} />
       </section>
       <JoinBanner

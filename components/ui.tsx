@@ -43,7 +43,7 @@ export function SectionHeading({
   action?: React.ReactNode;
 }) {
   return (
-    <div data-reveal className="mb-10 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
+    <div data-reveal className="mb-8 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between">
       <div className="max-w-3xl">
         <p className="mono flex items-center gap-3 text-xs uppercase tracking-widest text-muted">
           <BlockMark />
@@ -52,8 +52,8 @@ export function SectionHeading({
             {label}
           </span>
         </p>
-        <h2 className="display mt-4 text-[clamp(2.3rem,6vw,4.5rem)]">{title}</h2>
-        {children && <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{children}</p>}
+        <h2 className="display mt-3 text-section">{title}</h2>
+        {children && <p className="mt-4 max-w-2xl leading-relaxed text-muted">{children}</p>}
       </div>
       {action && <div className="shrink-0">{action}</div>}
     </div>
@@ -71,13 +71,13 @@ export function PageHeader({
 }) {
   return (
     <header className="border-b-2 border-ink">
-      <div className="wrap rise pb-12 pt-14 md:pb-16 md:pt-20">
+      <div className="wrap rise pb-10 pt-10 md:pb-12 md:pt-14">
         <p className="mono text-xs uppercase tracking-widest text-muted">
           <span className="text-g-blue">~</span>
           {path} <span className="cursor">▌</span>
         </p>
-        <h1 className="display mt-5 text-[clamp(3rem,10vw,8rem)]">{title}</h1>
-        {children && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">{children}</p>}
+        <h1 className="display mt-4 text-page">{title}</h1>
+        {children && <p className="mt-5 max-w-2xl leading-relaxed text-muted md:text-lg">{children}</p>}
       </div>
     </header>
   );
@@ -126,19 +126,19 @@ export function EventCard({ event, large = false }: { event: EventEntry; large?:
         sizes={large ? "(min-width: 1024px) 60vw, 100vw" : "(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"}
         className="aspect-[16/10] border-b-2 border-ink"
       />
-      <div className="flex flex-1 flex-col p-5 md:p-6">
+      <div className="flex flex-1 flex-col p-4 md:p-5">
         <div className="flex flex-wrap items-center gap-2">
           <TypeChip type={event.type} />
           <span className="mono text-xs text-muted">{event.dateLabel}</span>
         </div>
-        <h3 className={`display mt-4 ${large ? "text-3xl md:text-4xl" : "text-2xl"} !leading-[1.02]`}>{event.title}</h3>
-        <p className="mt-3 line-clamp-3 text-[0.97rem] leading-relaxed text-muted">{event.summary}</p>
+        <h3 className={`display mt-3 ${large ? "text-2xl md:text-3xl" : "text-xl"} !leading-[1.05]`}>{event.title}</h3>
+        <p className="mt-2.5 line-clamp-3 text-[0.9rem] leading-relaxed text-muted">{event.summary}</p>
         {large && event.location && (
           <p className="mono mt-4 text-xs text-muted">
             <span className="text-g-red">@</span> {event.location}
           </p>
         )}
-        <p className="mono mt-auto pt-5 text-xs uppercase tracking-wider">
+        <p className="mono mt-auto pt-4 text-xs uppercase tracking-wider">
           Read recap{" "}
           <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">
             →
@@ -158,15 +158,15 @@ export function ArticleCard({ article, index }: { article: Article; index?: numb
         sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
         className="aspect-[4/3] border-b-2 border-ink"
       />
-      <div className="flex flex-1 flex-col p-5 md:p-6">
+      <div className="flex flex-1 flex-col p-4 md:p-5">
         <p className="mono flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
           {index !== undefined && <span className="text-ink">#{String(index).padStart(2, "0")}</span>}
           <span>{article.dateLabel}</span>
           {article.tags[0] && <span className="uppercase tracking-wider text-g-blue">{article.tags[0]}</span>}
         </p>
-        <h3 className="display mt-3 text-2xl !leading-[1.05]">{article.title}</h3>
-        <p className="mt-3 line-clamp-3 text-[0.97rem] leading-relaxed text-muted">{article.summary}</p>
-        <p className="mono mt-auto pt-5 text-xs uppercase tracking-wider">
+        <h3 className="display mt-2.5 text-xl !leading-[1.08]">{article.title}</h3>
+        <p className="mt-2.5 line-clamp-3 text-[0.9rem] leading-relaxed text-muted">{article.summary}</p>
+        <p className="mono mt-auto pt-4 text-xs uppercase tracking-wider">
           Read{" "}
           <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">
             →
@@ -179,8 +179,8 @@ export function ArticleCard({ article, index }: { article: Article; index?: numb
 
 export function JoinBanner({ open, period, generation }: { open: boolean; period: string; generation: number }) {
   return (
-    <section className="wrap mt-24">
-      <div data-reveal className="card relative overflow-hidden bg-g-blue p-8 text-white md:p-14">
+    <section className="wrap mt-20">
+      <div data-reveal className="card relative overflow-hidden bg-g-blue p-7 text-white md:p-10">
         <div
           className="pointer-events-none absolute inset-0 opacity-20"
           aria-hidden="true"
@@ -196,18 +196,18 @@ export function JoinBanner({ open, period, generation }: { open: boolean; period
               {">"} recruitment --gen {generation} {"// "}
               {open ? `open · ${period}` : "closed"}
             </p>
-            <p className="display mt-4 text-[clamp(2.6rem,7vw,5.5rem)]">
+            <p className="display mt-3 text-headline">
               Build it
               <br />
               with us.
             </p>
-            <p className="mt-5 max-w-xl text-lg text-white/90">
+            <p className="mt-4 max-w-xl text-white/90">
               {open
                 ? "Applications are open. Pick your station and start building your next."
                 : "You do not need to be perfect to start, only ready to learn. See the four stations and how recruitment works."}
             </p>
           </div>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-3">
             <Link href="/join" className="btn btn-yellow">
               {open ? "Apply now" : "Explore the stations"} <span aria-hidden="true">→</span>
             </Link>

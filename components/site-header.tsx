@@ -27,7 +27,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b-2 border-ink bg-paper/90 backdrop-blur-md">
-      <div className="wrap flex h-16 items-center justify-between gap-4">
+      <div className="wrap flex h-14 items-center justify-between gap-4">
         <Link href="/" aria-label="GDG on Campus VinUniversity, home" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
@@ -38,21 +38,21 @@ export function SiteHeader() {
               key={item.href}
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
-              className={`mono rounded-full px-3.5 py-2 text-[0.8rem] uppercase tracking-wider transition-colors ${
+              className={`mono rounded-full px-3 py-1.5 text-[0.75rem] uppercase tracking-wider transition-colors ${
                 isActive(item.href) ? "bg-ink text-white" : "hover:bg-soft-yellow"
               }`}
             >
               {item.label}
             </Link>
           ))}
-          <Link href="/join" className="btn btn-blue ml-3 !py-2.5 !text-[0.95rem]">
+          <Link href="/join" className="btn btn-blue ml-3 !py-2 !text-[0.85rem]">
             Join us <span aria-hidden="true">→</span>
           </Link>
         </nav>
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-ink bg-white md:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-lg border-2 border-ink bg-white md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -79,10 +79,10 @@ export function SiteHeader() {
                   href={item.href}
                   onClick={() => setOpen(false)}
                   aria-current={isActive(item.href) ? "page" : undefined}
-                  className="flex items-baseline gap-4 border-b border-rule py-3.5"
+                  className="flex items-baseline gap-4 border-b border-rule py-3"
                 >
                   <span className="mono text-xs text-muted">0{i + 1}</span>
-                  <span className="display text-3xl">{item.label}</span>
+                  <span className="display text-2xl">{item.label}</span>
                 </Link>
               </li>
             ))}

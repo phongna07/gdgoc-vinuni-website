@@ -32,14 +32,14 @@ export default function AboutPage() {
         {site.description}
       </PageHeader>
 
-      <section className="wrap mt-20 grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+      <section className="wrap mt-14 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
         <div data-reveal>
           <p className="mono text-xs uppercase tracking-widest text-muted">{"01 // mission"}</p>
-          <h2 className="display mt-4 text-[clamp(2.2rem,5vw,3.75rem)]">
+          <h2 className="display mt-3 text-section">
             Technology is what you can <span className="text-g-blue">make</span>, not only what you know.
           </h2>
         </div>
-        <div data-reveal className="space-y-5 text-lg leading-relaxed text-muted">
+        <div data-reveal className="space-y-4 leading-relaxed text-muted md:text-[1.05rem]">
           <p>
             Google Developer Groups on Campus are student communities supported by Google, found at universities
             around the world. Ours started in September {site.foundedYear} as Google Developer Student Club
@@ -56,37 +56,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="wrap mt-24">
+      <section className="wrap mt-20">
         <SectionHeading index="02" label="what we do" title="Four ways we spend our time." />
-        <ul className="grid gap-5 sm:grid-cols-2">
+        <ul className="grid gap-4 sm:grid-cols-2">
           {WHAT_WE_DO.map((w, i) => (
-            <li key={w.title} data-reveal className={`card p-6 md:p-8 ${w.color}`}>
+            <li key={w.title} data-reveal className={`card p-5 md:p-6 ${w.color}`}>
               <p className="mono text-xs text-ink/50">0{i + 1}</p>
-              <h3 className="display mt-2 text-3xl">{w.title}</h3>
-              <p className="mt-3 leading-relaxed text-ink/75">{w.text}</p>
+              <h3 className="display mt-2 text-2xl">{w.title}</h3>
+              <p className="mt-2 text-[0.95rem] leading-relaxed text-ink/75">{w.text}</p>
             </li>
           ))}
         </ul>
       </section>
 
-      <section id="timeline" className="wrap mt-24">
+      <section id="timeline" className="wrap mt-20">
         <SectionHeading index="03" label="git log --reverse" title="How we got here." />
         <ol className="relative ml-3 border-l-2 border-ink">
           {timeline.map((m) => (
-            <li key={m.date + m.tag} data-reveal className="relative pb-10 pl-8 last:pb-0 md:pl-12">
+            <li key={m.date + m.tag} data-reveal className="relative pb-8 pl-7 last:pb-0 md:pl-10">
               <span
-                className={`absolute -left-[13px] top-1 h-6 w-6 rounded-md border-2 border-ink ${ACCENT_BG[m.color]}`}
+                className={`absolute -left-[11px] top-1 h-5 w-5 rounded-md border-2 border-ink ${ACCENT_BG[m.color]}`}
                 aria-hidden="true"
               />
-              <div className="grid gap-2 md:grid-cols-[11rem_1fr] md:gap-8">
+              <div className="grid gap-2 md:grid-cols-[10rem_1fr] md:gap-6">
                 <p className="mono pt-1 text-xs uppercase tracking-wider text-muted">
                   <span className="text-ink">{formatMonth(m.date)}</span>
                   <br />
                   {m.tag}
                 </p>
                 <div>
-                  <h3 className="display text-2xl md:text-3xl">{m.title}</h3>
-                  <p className="mt-2 max-w-2xl leading-relaxed text-muted">{m.text}</p>
+                  <h3 className="display text-xl md:text-2xl">{m.title}</h3>
+                  <p className="mt-1.5 max-w-2xl text-[0.95rem] leading-relaxed text-muted">{m.text}</p>
                 </div>
               </div>
             </li>
@@ -94,15 +94,15 @@ export default function AboutPage() {
         </ol>
       </section>
 
-      <section className="wrap mt-24">
+      <section className="wrap mt-20">
         <SectionHeading index="04" label="recognition" title="Things we are proud of." />
         <ul className="card divide-y-2 divide-ink overflow-hidden">
           {RECOGNITION.map((r) => (
             <li key={r.title} data-reveal>
-              <Link href={r.href} className="group grid gap-1 p-5 hover:bg-soft-yellow md:grid-cols-[6rem_1fr_auto] md:items-center md:gap-6 md:p-6">
+              <Link href={r.href} className="group grid gap-1 px-5 py-4 hover:bg-soft-yellow md:grid-cols-[5rem_1fr_auto] md:items-center md:gap-5">
                 <span className="mono text-sm text-muted">{r.year}</span>
                 <span>
-                  <span className="display block text-2xl">{r.title}</span>
+                  <span className="display block text-xl">{r.title}</span>
                   <span className="text-sm text-muted">{r.by}</span>
                 </span>
                 <span className="mono text-xs uppercase tracking-wider" aria-hidden="true">
@@ -115,16 +115,16 @@ export default function AboutPage() {
       </section>
 
       {advisors.length > 0 && (
-        <section className="wrap mt-24">
+        <section className="wrap mt-20">
           <SectionHeading index="05" label="advisors" title="People who guide us." />
-          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {advisors.map((a) => (
-              <li key={a.name} data-reveal className="card flex items-center gap-5 p-5">
-                <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl border-2 border-ink bg-soft-blue">
-                  {a.photo && <Image src={a.photo} alt={a.name} fill sizes="96px" className="object-cover" />}
+              <li key={a.name} data-reveal className="card flex items-center gap-4 p-4">
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 border-ink bg-soft-blue">
+                  {a.photo && <Image src={a.photo} alt={a.name} fill sizes="80px" className="object-cover" />}
                 </div>
                 <div>
-                  <h3 className="display text-2xl !leading-[1.05]">{a.name}</h3>
+                  <h3 className="display text-xl !leading-[1.08]">{a.name}</h3>
                   <p className="mt-1 text-sm text-muted">{a.role}</p>
                 </div>
               </li>

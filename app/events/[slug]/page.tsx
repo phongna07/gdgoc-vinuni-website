@@ -29,27 +29,27 @@ export default async function EventPage({ params }: Props) {
 
   const all = getEvents();
   const idx = all.findIndex((e) => e.slug === slug);
-  const more = [all[idx + 1], all[idx - 1]].filter(Boolean).slice(0, 2);
+  const more = [all[idx + 1], all[idx - 1], all[idx + 2], all[idx - 2]].filter(Boolean).slice(0, 3);
 
   return (
     <article>
       <header className="border-b-2 border-ink">
-        <div className="wrap rise pb-10 pt-10 md:pt-14">
+        <div className="wrap rise pb-9 pt-8 md:pt-11">
           <p className="mono text-xs uppercase tracking-widest text-muted">
             <Link href="/events" className="underline underline-offset-4 hover:text-g-blue">
               ← /events
             </Link>
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-2">
+          <div className="mt-5 flex flex-wrap items-center gap-2">
             <TypeChip type={event.type} />
             {event.role && <span className="chip bg-soft-yellow">{event.role}</span>}
           </div>
-          <h1 className="display mt-5 max-w-5xl text-[clamp(2.4rem,7vw,5.5rem)]">{event.title}</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted md:text-xl">{event.summary}</p>
+          <h1 className="display mt-4 max-w-4xl text-headline">{event.title}</h1>
+          <p className="mt-5 max-w-2xl leading-relaxed text-muted md:text-lg">{event.summary}</p>
         </div>
       </header>
 
-      <div className="wrap mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-14">
+      <div className="wrap mt-9 grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-10">
         <div className="min-w-0">
           <Frame
             img={event.cover}
@@ -58,26 +58,26 @@ export default async function EventPage({ params }: Props) {
             priority
             className="card aspect-[16/10] !bg-soft-blue"
           />
-          <div className="prose mt-10 max-w-none" dangerouslySetInnerHTML={{ __html: event.html }} />
+          <div className="prose mt-8 max-w-none" dangerouslySetInnerHTML={{ __html: event.html }} />
         </div>
 
-        <aside className="lg:sticky lg:top-24 lg:self-start">
+        <aside className="lg:sticky lg:top-20 lg:self-start">
           <dl className="card divide-y-2 divide-ink overflow-hidden">
-            <div className="p-5">
+            <div className="p-4">
               <dt className="mono text-[0.7rem] uppercase tracking-widest text-muted">{"// when"}</dt>
-              <dd className="display mt-1.5 text-2xl">{event.dateLabel}</dd>
+              <dd className="display mt-1 text-xl">{event.dateLabel}</dd>
             </div>
             {event.location && (
-              <div className="p-5">
+              <div className="p-4">
                 <dt className="mono text-[0.7rem] uppercase tracking-widest text-muted">{"// where"}</dt>
-                <dd className="mt-1.5 font-semibold leading-snug">{event.location}</dd>
+                <dd className="mt-1 text-[0.95rem] font-semibold leading-snug">{event.location}</dd>
               </div>
             )}
             {event.speakers.length > 0 && (
-              <div className="p-5">
+              <div className="p-4">
                 <dt className="mono text-[0.7rem] uppercase tracking-widest text-muted">{"// speakers"}</dt>
                 <dd className="mt-2">
-                  <ul className="space-y-3">
+                  <ul className="space-y-2.5 text-[0.95rem]">
                     {event.speakers.map((s) => (
                       <li key={s.name}>
                         <p className="font-semibold leading-snug">{s.name}</p>
@@ -93,21 +93,21 @@ export default async function EventPage({ params }: Props) {
       </div>
 
       {event.gallery.length > 1 && (
-        <section className="wrap mt-16">
-          <h2 className="display text-4xl md:text-5xl">Photos</h2>
+        <section className="wrap mt-14">
+          <h2 className="display text-3xl md:text-4xl">Photos</h2>
           <p className="mono mt-2 text-xs uppercase tracking-widest text-muted">
             {event.gallery.length} files in /images/events/{event.slug}
           </p>
-          <div className="mt-8">
+          <div className="mt-6">
             <Gallery images={event.gallery} title={event.title} />
           </div>
         </section>
       )}
 
       {more.length > 0 && (
-        <section className="wrap mt-20">
-          <h2 className="display text-4xl md:text-5xl">More events</h2>
-          <ul className="mt-8 grid gap-5 sm:grid-cols-2">
+        <section className="wrap mt-16">
+          <h2 className="display text-3xl md:text-4xl">More events</h2>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {more.map((e) => (
               <li key={e.slug}>
                 <EventCard event={e} />

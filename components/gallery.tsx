@@ -41,7 +41,7 @@ export function Gallery({ images, title }: { images: Img[]; title: string }) {
             <button
               type="button"
               onClick={() => setActive(i)}
-              className="card-link block w-full cursor-zoom-in overflow-hidden rounded-xl border-2 border-ink bg-white shadow-[4px_4px_0_0_var(--ink)]"
+              className="card-link block w-full cursor-zoom-in overflow-hidden rounded-xl border-2 border-ink bg-white shadow-[3px_3px_0_0_var(--ink)]"
               aria-label={`Open photo ${i + 1} of ${images.length}`}
             >
               <Image

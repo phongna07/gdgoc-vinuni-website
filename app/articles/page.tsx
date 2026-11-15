@@ -17,7 +17,7 @@ export default function ArticlesPage() {
         Stories about the people in the club, explainers on what we are learning, and guides for joining us.
       </PageHeader>
 
-      <section className="wrap mt-12">
+      <section className="wrap mt-10">
         {first && (
           <Link
             href={`/articles/${first.slug}`}
@@ -28,16 +28,16 @@ export default function ArticlesPage() {
               alt=""
               sizes="(min-width: 768px) 50vw, 100vw"
               priority
-              className="aspect-[4/3] border-b-2 border-ink md:aspect-auto md:min-h-[24rem] md:border-b-0 md:border-r-2"
+              className="aspect-[4/3] border-b-2 border-ink md:aspect-auto md:min-h-[20rem] md:border-b-0 md:border-r-2"
             />
-            <div className="flex flex-col justify-center p-6 md:p-10">
+            <div className="flex flex-col justify-center p-5 md:p-8">
               <p className="mono flex flex-wrap gap-3 text-xs text-muted">
                 <span className="rounded bg-g-yellow px-1.5 font-bold uppercase text-ink">Latest</span>
                 <span>{first.dateLabel}</span>
               </p>
-              <h2 className="display mt-4 text-4xl !leading-[1] md:text-5xl">{first.title}</h2>
-              <p className="mt-4 text-lg leading-relaxed text-muted">{first.summary}</p>
-              <p className="mono mt-6 text-xs uppercase tracking-wider">
+              <h2 className="display mt-3 text-3xl !leading-[1.02] md:text-4xl">{first.title}</h2>
+              <p className="mt-3 leading-relaxed text-muted">{first.summary}</p>
+              <p className="mono mt-5 text-xs uppercase tracking-wider">
                 Read{" "}
                 <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">
                   →
@@ -47,7 +47,7 @@ export default function ArticlesPage() {
           </Link>
         )}
 
-        <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((a, i) => (
             <li key={a.slug}>
               <ArticleCard article={a} index={rest.length - i} />

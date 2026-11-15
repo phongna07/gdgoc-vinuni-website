@@ -33,7 +33,7 @@ export default function HomePage() {
     <>
       {/* ---------- hero ---------- */}
       <section className="relative overflow-hidden border-b-2 border-ink">
-        <div className="wrap pb-16 pt-8 md:pb-24 md:pt-10">
+        <div className="wrap pb-12 pt-6 md:pb-16 md:pt-8">
           <div className="mono flex items-center justify-between text-[0.7rem] uppercase tracking-widest text-muted">
             <span>{"> initializing next_generation..."}</span>
             <span className="flex items-center gap-2">
@@ -42,14 +42,14 @@ export default function HomePage() {
             </span>
           </div>
 
-          <div className="crop mt-6 grid items-end gap-12 px-1 py-8 md:mt-8 md:py-12 lg:grid-cols-[1.25fr_1fr]">
+          <div className="crop mt-5 grid items-end gap-10 px-1 py-6 md:mt-6 md:py-10 lg:grid-cols-[1.25fr_1fr]">
             <div>
               <p className="rise mono inline-flex items-center gap-2 rounded-full border-2 border-ink bg-white px-3 py-1.5 text-[0.7rem] uppercase tracking-widest">
                 <span className="rounded-full bg-g-yellow px-1.5 font-bold">GEN 0{site.generation}</span>
                 Google Developer Group on Campus · VinUniversity
               </p>
 
-              <h1 className="display mt-7 text-[clamp(4.2rem,15.5vw,12.5rem)] uppercase">
+              <h1 className="display mt-6 text-hero uppercase">
                 <span className="rise block">Build</span>
                 <span className="rise block" style={{ animationDelay: "0.08s" }}>
                   Your
@@ -59,12 +59,12 @@ export default function HomePage() {
                 </span>
               </h1>
 
-              <p className="rise mt-8 max-w-xl text-lg leading-relaxed text-muted md:text-xl" style={{ animationDelay: "0.3s" }}>
+              <p className="rise mt-6 max-w-lg leading-relaxed text-muted md:text-lg" style={{ animationDelay: "0.3s" }}>
                 We are the student developer community at VinUniversity. We learn new technology, build real things
                 with it, and do it together.
               </p>
 
-              <div className="rise mt-9 flex flex-wrap gap-4" style={{ animationDelay: "0.4s" }}>
+              <div className="rise mt-7 flex flex-wrap gap-3" style={{ animationDelay: "0.4s" }}>
                 <Link href="/join" className="btn btn-blue">
                   {recruitment.open ? "Apply now" : "Join us"} <span aria-hidden="true">→</span>
                 </Link>
@@ -74,14 +74,14 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex flex-col items-start gap-8 lg:items-end">
+            <div className="flex flex-col items-start gap-7 lg:items-end">
               <HeroBlocks />
-              <div className="w-full max-w-[26rem]">
-                <p className="mono text-sm">
+              <div className="w-full max-w-[19rem]">
+                <p className="mono text-[0.8rem]">
                   <span className="text-g-blue">{">"}</span> build(<span className="text-g-red">your</span>.
                   <span className="text-g-green">next</span>)
                 </p>
-                <div className="mt-3 h-3 overflow-hidden rounded-full border-2 border-ink bg-white">
+                <div className="mt-2.5 h-2.5 overflow-hidden rounded-full border-2 border-ink bg-white">
                   <div className="load-bar h-full bg-g-blue" />
                 </div>
                 <p className="mono mt-2 flex justify-between text-[0.65rem] uppercase tracking-widest text-muted">
@@ -95,15 +95,15 @@ export default function HomePage() {
       </section>
 
       {/* ---------- ticker ---------- */}
-      <div className="overflow-hidden border-b-2 border-ink bg-ink py-3.5 text-white" aria-hidden="true">
+      <div className="overflow-hidden border-b-2 border-ink bg-ink py-2.5 text-white" aria-hidden="true">
         <div className="marquee flex w-max">
           {[0, 1].map((n) => (
             <div key={n} className="flex shrink-0 items-center">
               {TICKER.map((word, i) => (
-                <span key={word} className="display flex items-center text-2xl uppercase md:text-3xl">
-                  <span className="px-6">{word}</span>
+                <span key={word} className="display flex items-center text-lg uppercase md:text-xl">
+                  <span className="px-5">{word}</span>
                   <span
-                    className={`h-3.5 w-3.5 rounded-[4px] ${["bg-g-blue", "bg-g-red", "bg-g-yellow", "bg-g-green"][i % 4]}`}
+                    className={`h-2.5 w-2.5 rounded-[3px] ${["bg-g-blue", "bg-g-red", "bg-g-yellow", "bg-g-green"][i % 4]}`}
                   />
                 </span>
               ))}
@@ -113,55 +113,55 @@ export default function HomePage() {
       </div>
 
       {/* ---------- who we are ---------- */}
-      <section className="wrap mt-24">
+      <section className="wrap mt-16 md:mt-20">
         <SectionHeading index="01" label="who we are" title={<>A community that learns by building.</>}>
           {site.description}
         </SectionHeading>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3">
           {site.pillars.map((p, i) => (
             <article
               key={p.title}
               data-reveal
-              className="card p-6 md:p-7"
+              className="card p-5 md:p-6"
               style={{ animationDelay: `${i * 60}ms` }}
             >
               <span
-                className={`mono inline-flex h-9 w-9 items-center justify-center rounded-lg border-2 border-ink text-sm font-bold ${
+                className={`mono inline-flex h-8 w-8 items-center justify-center rounded-lg border-2 border-ink text-xs font-bold ${
                   ["bg-g-yellow", "bg-g-red text-white", "bg-g-green text-white"][i % 3]
                 }`}
               >
                 {i + 1}
               </span>
-              <h3 className="display mt-5 text-2xl">{p.title}</h3>
-              <p className="mt-3 leading-relaxed text-muted">{p.text}</p>
+              <h3 className="display mt-4 text-xl">{p.title}</h3>
+              <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">{p.text}</p>
             </article>
           ))}
         </div>
 
-        <dl data-reveal className="card mt-5 grid grid-cols-2 overflow-hidden md:grid-cols-4">
+        <dl data-reveal className="card mt-4 grid grid-cols-2 overflow-hidden md:grid-cols-4">
           {site.stats.map((s, i) => (
             <div
               key={s.label}
-              className={`p-6 md:p-7 ${i % 2 === 1 ? "border-l-2 border-ink" : ""} ${
+              className={`p-5 md:p-6 ${i % 2 === 1 ? "border-l-2 border-ink" : ""} ${
                 i >= 2 ? "border-t-2 border-ink md:border-t-0" : ""
               } ${i === 2 ? "md:border-l-2" : ""}`}
             >
               <dt className="mono order-2 text-[0.7rem] uppercase tracking-widest text-muted">{s.label}</dt>
-              <dd className="display mt-2 text-5xl md:text-6xl">{s.value}</dd>
+              <dd className="display mt-1.5 text-4xl md:text-5xl">{s.value}</dd>
             </div>
           ))}
         </dl>
 
-        <p data-reveal className="mt-8">
-          <Link href="/about" className="mono text-sm uppercase tracking-wider underline decoration-2 underline-offset-4 hover:text-g-blue">
+        <p data-reveal className="mt-6">
+          <Link href="/about" className="mono text-xs uppercase tracking-wider underline decoration-2 underline-offset-4 hover:text-g-blue">
             Read our story →
           </Link>
         </p>
       </section>
 
       {/* ---------- stations ---------- */}
-      <section className="wrap mt-28">
+      <section className="wrap mt-20">
         <SectionHeading
           index="02"
           label="four stations"
@@ -176,32 +176,32 @@ export default function HomePage() {
           open to anyone who wants to learn with us.
         </SectionHeading>
 
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           {departments.map((d) => (
             <Link
               key={d.id}
               href={`/join#${d.id}`}
               data-reveal
-              className={`card card-link group flex flex-col p-6 md:p-8 ${ACCENT_SOFT[d.color]}`}
+              className={`card card-link group flex flex-col p-5 md:p-6 ${ACCENT_SOFT[d.color]}`}
             >
               <div className="flex items-start justify-between">
                 <span className={`chip !border-2 ${ACCENT_BG[d.color]} ${d.color === "yellow" ? "" : "!text-white"}`}>
                   Station {d.station}
                 </span>
-                <span className="display text-6xl text-ink/15 md:text-7xl" aria-hidden="true">
+                <span className="display text-5xl text-ink/15 md:text-6xl" aria-hidden="true">
                   {d.station}
                 </span>
               </div>
-              <h3 className="display mt-2 text-3xl md:text-[2.6rem]">{d.name}</h3>
-              <p className="mt-4 max-w-md leading-relaxed text-ink/75">{d.summary}</p>
-              <ul className="mt-6 flex flex-wrap gap-2">
+              <h3 className="display mt-1 text-2xl md:text-[2rem]">{d.name}</h3>
+              <p className="mt-3 max-w-md text-[0.95rem] leading-relaxed text-ink/75">{d.summary}</p>
+              <ul className="mt-5 flex flex-wrap gap-1.5">
                 {d.tracks.map((t) => (
                   <li key={t} className="chip">
                     {t}
                   </li>
                 ))}
               </ul>
-              <p className="mono mt-auto pt-7 text-xs uppercase tracking-wider">
+              <p className="mono mt-auto pt-5 text-xs uppercase tracking-wider">
                 Open station{" "}
                 <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">
                   →
@@ -213,7 +213,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------- events ---------- */}
-      <section className="wrap mt-28">
+      <section className="wrap mt-20">
         <SectionHeading
           index="03"
           label="events"
@@ -228,25 +228,25 @@ export default function HomePage() {
           only agenda is to share what we know.
         </SectionHeading>
 
-        <div className="grid gap-5 lg:grid-cols-[1.35fr_1fr]">
+        <div className="grid gap-4 lg:grid-cols-[1.35fr_1fr]">
           {lead && (
             <div data-reveal>
               <EventCard event={lead} large />
             </div>
           )}
-          <ul className="flex flex-col gap-5">
+          <ul className="flex flex-col gap-4">
             {rest.slice(0, 4).map((e) => (
               <li key={e.slug} data-reveal>
                 <Link href={`/events/${e.slug}`} className="card card-link group flex items-stretch overflow-hidden">
-                  <div className="relative w-28 shrink-0 border-r-2 border-ink bg-soft-blue sm:w-40">
+                  <div className="relative w-24 shrink-0 border-r-2 border-ink bg-soft-blue sm:w-32">
                     {e.cover && (
-                      <Image src={e.cover.src} alt="" fill sizes="160px" className="object-cover" />
+                      <Image src={e.cover.src} alt="" fill sizes="128px" className="object-cover" />
                     )}
                   </div>
-                  <div className="min-w-0 p-4 sm:p-5">
+                  <div className="min-w-0 px-4 py-3.5">
                     <p className="mono text-[0.7rem] uppercase tracking-wider text-muted">{e.dateLabel}</p>
-                    <h3 className="display mt-1.5 text-xl !leading-[1.08] sm:text-2xl">{e.title}</h3>
-                    <p className="mt-1.5 line-clamp-2 text-sm text-muted">{e.summary}</p>
+                    <h3 className="display mt-1 text-lg !leading-[1.1] sm:text-xl">{e.title}</h3>
+                    <p className="mt-1 line-clamp-2 text-[0.82rem] text-muted">{e.summary}</p>
                   </div>
                 </Link>
               </li>
@@ -256,27 +256,27 @@ export default function HomePage() {
       </section>
 
       {/* ---------- timeline ---------- */}
-      <section className="mt-28 border-y-2 border-ink bg-white/70 py-20">
+      <section className="mt-20 border-y-2 border-ink bg-white/70 py-14">
         <div className="wrap">
           <SectionHeading index="04" label="git log" title={<>From GDSC to Gen {site.generation}.</>}>
             A short commit history of the chapter, from the first post in September {site.foundedYear} to today.
           </SectionHeading>
         </div>
 
-        <div className="overflow-x-auto pb-6 [scrollbar-width:thin]">
-          <ol className="wrap flex w-max min-w-full gap-5 !max-w-none md:!px-[max(2rem,calc((100vw-76rem)/2+2rem))]">
+        <div className="overflow-x-auto pb-5 [scrollbar-width:thin]">
+          <ol className="wrap flex w-max min-w-full gap-5 !max-w-none md:!px-[max(2rem,calc((100vw-var(--wrap))/2+2rem))]">
             {timeline.map((m, i) => (
-              <li key={m.date + m.tag} className="relative w-72 shrink-0 pt-8">
-                <span className="absolute left-0 right-[-1.25rem] top-[0.7rem] h-0.5 bg-ink" aria-hidden="true" />
+              <li key={m.date + m.tag} className="relative w-60 shrink-0 pt-7">
+                <span className="absolute left-0 right-[-1.25rem] top-[0.55rem] h-0.5 bg-ink" aria-hidden="true" />
                 <span
-                  className={`absolute left-0 top-0 h-6 w-6 rounded-md border-2 border-ink ${ACCENT_BG[m.color]}`}
+                  className={`absolute left-0 top-0 h-5 w-5 rounded-md border-2 border-ink ${ACCENT_BG[m.color]}`}
                   aria-hidden="true"
                 />
                 <p className="mono mt-3 text-xs uppercase tracking-wider text-muted">
                   <span className="text-ink">{formatMonth(m.date)}</span> · {m.tag}
                 </p>
-                <h3 className="display mt-2 text-2xl !leading-[1.05]">{m.title}</h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">{m.text}</p>
+                <h3 className="display mt-2 text-xl !leading-[1.08]">{m.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{m.text}</p>
                 <p className="mono mt-3 text-[0.65rem] text-ink/30">commit {String(i + 1).padStart(2, "0")}</p>
               </li>
             ))}
@@ -285,7 +285,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------- articles ---------- */}
-      <section className="wrap mt-28">
+      <section className="wrap mt-20">
         <SectionHeading
           index="05"
           label="articles"
@@ -296,7 +296,7 @@ export default function HomePage() {
             </Link>
           }
         />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((a, i) => (
             <div key={a.slug} data-reveal style={{ animationDelay: `${i * 60}ms` }}>
               <ArticleCard article={a} />
@@ -307,14 +307,14 @@ export default function HomePage() {
 
       {/* ---------- photo wall ---------- */}
       {wall.length > 0 && (
-        <section className="wrap mt-28">
+        <section className="wrap mt-20">
           <SectionHeading index="06" label="photo wall" title={<>Faces behind the code.</>} />
-          <div className="columns-2 gap-4 md:columns-3 lg:columns-4 [&>*]:mb-4">
+          <div className="columns-2 gap-3.5 md:columns-3 lg:columns-4 [&>*]:mb-3.5">
             {wall.map((img, i) => (
               <figure
                 key={img.src}
                 data-reveal
-                className={`break-inside-avoid overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-[4px_4px_0_0_var(--ink)] ${
+                className={`break-inside-avoid overflow-hidden rounded-xl border-2 border-ink bg-white shadow-[3px_3px_0_0_var(--ink)] ${
                   i % 3 === 0 ? "rotate-[-1.2deg]" : i % 3 === 1 ? "rotate-[0.8deg]" : ""
                 }`}
               >

@@ -15,7 +15,7 @@ export default function TeamPage() {
       <PageHeader path="/team" title="Team">
         Every year a new generation takes over the club. Pick one to see who built it.
       </PageHeader>
-      <section className="wrap mt-12">
+      <section className="wrap mt-10">
         <TeamSwitcher generations={generations} />
       </section>
       <JoinBanner
