@@ -1,0 +1,11 @@
+[
+  { "date": "2023-09", "tag": "init", "title": "GDSC VinUni joins the network", "text": "The chapter is founded as Google Developer Student Club VinUniversity and joins GDSC Vietnam.", "color": "red" },
+  { "date": "2023-10", "tag": "gen-1", "title": "Generation 1", "text": "The first members join across Tech (Web, AI), HR, Media and External Relations, with Lưu Bảo Yến as lead.", "color": "blue" },
+  { "date": "2023-11", "tag": "feat", "title": "Workshop Series begins", "text": "Four sessions prepare members for the Solution Challenge and Hackathon Vietnam, built around the UN Sustainable Development Goals.", "color": "yellow" },
+  { "date": "2024-05", "tag": "award", "title": "Student Champions of Change", "text": "VinUniversity recognises the club with its Student Champions of Change award.", "color": "green" },
+  { "date": "2024-09", "tag": "rename", "title": "GDSC becomes GDG on Campus", "text": "Along with chapters worldwide, the club takes its new name: Google Developer Group on Campus VinUniversity. Generation 2 joins.", "color": "red" },
+  { "date": "2025-02", "tag": "global", "title": "Sonder 2025", "text": "A cross-border online event with GDG on Campus chapters from Vietnam and the Philippines.", "color": "blue" },
+  { "date": "2025-04", "tag": "host", "title": "Hackathon Vietnam Demo Day at VinUni", "text": "The northern Demo Day of GDGoC Hackathon Vietnam 2025 takes place on our campus. Theme: Responsible AI.", "color": "yellow" },
+  { "date": "2025-09", "tag": "gen-3", "title": "Generation 3", "text": "New teams form: AI & Data and Software Engineering, alongside Media, Operations & HR and External Relations.", "color": "green" },
+  { "date": "2026-10", "tag": "gen-4", "title": "Build Your Next", "text": "Generation 4 recruitment opens with four stations: Tech, Operations & HR, Marketing & Communications, and Community Members.", "color": "blue" }
+]

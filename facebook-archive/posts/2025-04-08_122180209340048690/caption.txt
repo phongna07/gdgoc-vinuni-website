@@ -1,0 +1,22 @@
+🔥 GDGoC Vietnam Build With AI & Intro to APAC Solution Challenge 2025
+---------------------------
+Chúc mừng các đội thi đã xuất sắc vượt qua Vòng sơ khảo GDGoC Hackathon Vietnam 2025! Workshop này là đặc quyền chỉ dành riêng cho các bạn - những chiến binh ưu tú sẵn sàng bứt phá trong cuộc đua công nghệ.
+
+🌟Thông tin chi tiết: 
+Workshop “Build with AI”
+⏳Thời gian: 19h20 - 22h thứ Tư, ngày 09/04/2025.
+📍Nền tảng: Zoom
+👨‍💻Đối tượng tham gia: 36 đội thi bước qua vòng Sơ khảo, được chọn vào vòng Online Hackathon
+
+🤖Trong kỷ nguyên mà trí tuệ nhân tạo (AI) đang trỗi dậy mạnh mẽ và hiện diện khắp mọi mặt đời sống, từ hoạt động kinh doanh đến những trải nghiệm cá nhân, tầm ảnh hưởng của nó là điều không thể phủ nhận. Đến với workshop "Build with AI 2025", bạn sẽ có cơ hội tiếp nhận những phân tích sâu sắc từ các chuyên gia uy tín, khơi mở những ý tưởng độc đáo về việc khai thác AI một cách thông minh và tối ưu.
+
+🎯 Điều gì đang chờ đợi 36 đội thi xuất sắc nhất tại Workshop “Build with AI”:
+👉 Khám phá toàn diện ứng dụng của Gemini 2.0 Flash - công cụ AI tiên tiến và ứng dụng của nó trong cộng đồng lập trình. Thông qua bài Lab, bạn sẽ trực tiếp thực hành sử dụng API Gemini trong môi trường Python. Đây là cơ hội vàng để nắm vững kỹ năng, áp dụng ngay vào dự án của đội.
+👉 Làm quen với NotebookLM - trợ thủ AI đắc lực hỗ trợ nghiên cứu, giúp bạn tối ưu hóa ý tưởng và phát triển sản phẩm một cách hiệu quả nhất.
+👉Ngoài ra, bạn cũng có sẽ có cơ hội để cập nhật những thông tin mới nhất về cuộc thi Solution Challenge khu vực APAC. 
+ Hãy tận dụng cơ hội này để tiếp tục hoàn thiện sản phẩm và tỏa sáng trong vòng thi Online Hackathon sắp tới!
+---------------------------
+Google Developer Groups On Campus - Hackathon Vietnam
+Fanpage: https://www.facebook.com/gdgochackathonvietnam
+Email: hackathonvietnam.gdsc@gmail.com
+#GDSC #Vietnam #GDSC #Hackathon #googledeveloperstudentclubs #Googlefordevelopers #GDSC #google #solution #gdgochackathon

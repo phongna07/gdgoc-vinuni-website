@@ -1,0 +1,38 @@
+🔥 RECAP WORKSHOP: RECOMMENDATION SYSTEM 🔥
+
+On January 17, 2025, the workshop “Recommendation System: The Technology Behind Engaging Suggestions” successfully took place with the enthusiastic participation of VinUni students. 🎉
+
+✨ What made the workshop special?
+
+👉 1. Recommender System History: 
+To begin, speaker Pham Dinh Khanh provided an overview of the evolution of Recommender System algorithms. From the early Static Rule-Based methods to modern Deep Learning systems, he emphasized how these algorithms create personalized user experiences.
+
+👉 2. Deep Learning Recommender System: 
+In this section, Mr. Khanh delved into the specifics of Recommender System algorithms based on Deep Learning, comparing their advantages and disadvantages while presenting solutions to overcome their limitations.
+
+👉 3. Hands-on Lab: Building a DNN Recommender System: 
+The hands-on session was the highlight of the workshop! Participants directly built a Collaborative Filtering system using Deep Neural Networks under Mr. Khanh's expert guidance. It was a great opportunity to apply theory to practice and experience the technology firsthand.
+
+GDSC on Campus VinUni sincerely thanks all the students for their enthusiastic participation and Mr. Pham Dinh Khanh for his invaluable insights. See you at our upcoming workshops! 🎉
+---------------------------------
+
+🔥 RECAP WORKSHOP: RECOMMENDATION SYSTEM 🔥
+
+Vào ngày 17/01/2025, workshop “Recommendation System: The Technology Behind Engaging Suggestions” đã diễn ra thành công với sự tham gia của các bạn sinh viên tại VinUni. 🎉
+
+✨ Workshop có gì nổi bật?
+
+👉 1. Recommender System History
+Mở đầu, diễn giả Phạm Đình Khánh đã cung cấp bức tranh toàn cảnh về tiến trình phát triển của các thuật toán Recommender System. Từ những thuật toán Static Rule Base sơ khai đến các hệ thống Deep Learning hiện đại, anh đã nhấn mạnh cách những thuật toán này tạo ra các trải nghiệm cá nhân hóa cho người dùng.
+
+👉 2. Deep Learning Recommender System
+Trong phần này, diễn giả đã phân tích chuyên sâu về các nhóm thuật toán Recommender System dựa trên Deep Learning, đồng thời so sánh ưu, nhược điểm của từng thuật toán và đưa ra giải pháp khắc phục. 
+
+👉 3. Hands-on Lab: Xây dựng DNN Recommender System
+Đặc biệt, các thành viên tham gia đã có cơ hội trực tiếp xây dựng một hệ thống Collaborative Filtering bằng cách sử dụng Deep Neural Network dưới sự hướng dẫn tận tình từ diễn giả. Đây là cơ hội để các bạn áp dụng lý thuyết vào thực tế và trải nghiệm công nghệ trực tiếp.
+
+GDSC on Campus VinUni chân thành cảm ơn sự tham gia nhiệt tình của các bạn sinh viên và những chia sẻ giá trị từ anh Phạm Đình Khánh. Hẹn gặp lại các bạn ở các workshop tiếp theo! 🎉
+
+🦭Thông tin liên hệ / Contact Information:
+Gmail: gdsc.vinuni@gmail.com 
+Hotline: 0941530810 (Ms. Phương Linh)

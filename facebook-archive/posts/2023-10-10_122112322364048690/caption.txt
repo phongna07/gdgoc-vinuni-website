@@ -1,0 +1,25 @@
+Prof. Kok-Seng Wong
+(English below)
+
+Giáo sư Kok-Seng Wong hiện tại đang là Giáo sư Khoa Kỹ thuật và Khoa học Máy tính tại VinUniversity. Trước khi gia nhập VinUniversity, ông đã giảng dạy các môn học về khoa học máy tính (cả đại học và sau đại học) tại các trường đại học ở Kazakhstan, Malaysia và Hàn Quốc trong suốt 17 năm qua. 
+
+Giáo sư Kok-Seng Wong hướng đến việc áp dụng nguyên tắc và kỹ thuật từ mật mã vào việc thiết kế và triển khai các hệ thống bảo mật và bảo vệ sự riêng tư. Ông đã công bố 60 bài báo trong các tạp chí và hội nghị trong lĩnh vực nghiên cứu của mình. Để đạt được mục tiêu này, ông tiến hành nghiên cứu trong các lĩnh vực bảo mật, bảo vệ dữ liệu và Trí tuệ Nhân tạo đáng tin cậy, đồng thời duy trì sự liên quan mạnh mẽ đối với khung làm việc bảo vệ sự riêng tư.
+
+🖥️ QUAN TÂM NGHIÊN CỨU
+- Privacy and Data Protection
+- Privacy-Preserving Protocol Design
+- Applied Cryptography
+- Differential Privacy
+- Secure Multi-Party Computation
+
+---------
+Prof. Kok-Seng Wong is currently an Associate Professor in the College of Engineering and Computer Science, VinUniversity. Before joining VinUniversity, he taught computer science subjects (undergraduate and postgraduate) in Kazakhstan, Malaysian, and South Korean universities for the past 17 years. 
+
+Prof. Kok-Seng aims to bring principles and techniques from cryptography to the design and implementation of secure and privacy-protected systems. He has published 60 articles in journals and conferences in his research field. To this end, he conducts research that spans the areas of security, data privacy, and trustworthy AI while maintaining a strong relevance to the privacy-preserving framework.
+ 
+🖥️ RESEARCH INTEREST
+- Privacy and Data Protection
+- Privacy-Preserving Protocol Design
+- Applied Cryptography
+- Differential Privacy
+- Secure Multi-Party Computation

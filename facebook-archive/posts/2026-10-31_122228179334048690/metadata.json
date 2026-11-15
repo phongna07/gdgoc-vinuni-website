@@ -1,0 +1,20 @@
+{
+  "id": "122228179334048690",
+  "source": "https://www.facebook.com/photo/?fbid=122228179334048690&set=a.122100604622048690",
+  "published_utc": "2026-10-31T13:48:34+00:00",
+  "caption": "",
+  "caption_status": "no caption exposed on photo page",
+  "images": [
+    {
+      "photo_id": "122228179334048690",
+      "source": "https://www.facebook.com/photo/?fbid=122228179334048690",
+      "image_url": "https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/873996019_122228179250048690_8104955666702309140_n.jpg?stp=dst-jpg_tt6&cstp=mx2000x2000&ctp=s2000x2000&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=5vFDaprx6KIQ7kNvwFp1PPU&_nc_oc=AdrCFuZUGtRc1fhW8B43-_0tRb6te4NecU2Je2f3IQ1xiSJl9n3IuM60lqc5cth1HsSDhjit0od3RVntb3dZUpu0&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=ary6tfTesmWGfTt8cJ3j3Q&_nc_ss=7b20f&oh=00_AQRK3fFdphMaAfXzHh-H2qmKqG0AdCekNOB2s2ZBbY4MrA&oe=6AFE5304",
+      "width": 2000,
+      "height": 2000,
+      "file": "image_122228179334048690.jpg",
+      "bytes": 83018,
+      "sha256": "fbec0bea00aef6975e4d8d8621c14f3d0fab2d383690ea1102d04448e783cb09",
+      "status": "downloaded"
+    }
+  ]
+}

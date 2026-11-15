@@ -1,0 +1,46 @@
+[
+  {
+    "id": "tech",
+    "station": "01",
+    "name": "Tech",
+    "color": "blue",
+    "summary": "Builds the club's products and runs study jams, workshops and hackathon teams across web, backend, AI and data.",
+    "tracks": ["Web & Backend", "AI & Data", "Cloud & Dev Tools"],
+    "benefits": ["Google Developer resources", "Study jams and workshops", "Real projects", "A network of developers"],
+    "requirements": ["Basic Python or JavaScript/TypeScript", "Eager to learn, proactive", "Git, Firebase or Cloud is a plus", "Ready to grow"],
+    "openTo": "VinUniversity students"
+  },
+  {
+    "id": "operations-hr",
+    "station": "02",
+    "name": "Operations & HR",
+    "color": "green",
+    "summary": "Keeps the club running: plans events, handles logistics, and looks after members from recruitment to recognition.",
+    "tracks": ["Operations", "Human Resources"],
+    "benefits": ["Certificate (for 80%+ of assigned work)", "Gifts and awards", "Skills and management training", "Google Developer resources"],
+    "requirements": ["Proactive and responsible", "Good at communicating and connecting people", "Comfortable with Google Workspace", "Good time management"],
+    "openTo": "VinUniversity students"
+  },
+  {
+    "id": "marcom",
+    "station": "03",
+    "name": "Marketing & Communications",
+    "color": "yellow",
+    "summary": "Tells the club's story: writes, designs and shoots everything the community sees.",
+    "tracks": ["Content Writing", "Design"],
+    "benefits": ["Workshops and developer events", "A wider network", "Internal training", "Teamwork and project management"],
+    "requirements": ["Writing and editing, research and fact-checking", "An understanding of student audiences, English communication", "Visual concepts for posts and publications", "Photoshop, Illustrator, Procreate or Canva; typography, layout, colour"],
+    "openTo": "Students of VinUniversity and other universities"
+  },
+  {
+    "id": "community",
+    "station": "04",
+    "name": "Community Members",
+    "color": "red",
+    "summary": "The open door: join events when you want, get early access and updates, no department duties.",
+    "tracks": ["Open membership"],
+    "benefits": ["Google Developer resources", "Earlier event updates", "Priority event registration", "Training and soft skills"],
+    "requirements": ["Fee of 100,000 VND per semester", "Join the events you choose", "Follow the Community Rules", "Feedback is always welcome"],
+    "openTo": "Anyone who wants to learn with us"
+  }
+]

@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GDG on Campus VinUniversity — website
 
-## Getting Started
+Landing site for Google Developer Group on Campus at VinUniversity. Built with Next.js (App Router) and Tailwind CSS. All content lives in this repository as JSON and Markdown; there is no CMS or database.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun dev        # http://localhost:3000
+bun run build  # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Routes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route | Source |
+| --- | --- |
+| `/` | `app/page.tsx` |
+| `/about` | `app/about/page.tsx` |
+| `/events`, `/events/[slug]` | `content/events/*.md` |
+| `/articles`, `/articles/[slug]` | `content/articles/*.md` |
+| `/team` | `content/team/gen-*.json` |
+| `/join` | `content/departments.json`, `content/site.json` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+```
+content/
+  site.json          name, tagline, stats, socials, photo wall, recruitment status
+  departments.json   the four stations shown on / and /join
+  timeline.json      milestones shown on / and /about
+  team/gen-N.json    one file per generation
+  events/*.md        one file per event
+  articles/*.md      one file per article
+public/images/
+  events/<slug>/     photos for an event
+  articles/<slug>/   images for an article
+  team/gen-N/        portraits
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Add an event
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create `content/events/my-event.md`. The file name becomes the URL (`/events/my-event`).
+2. Put photos in `public/images/events/my-event/`. Every image in that folder appears in the gallery, sorted by file name.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```md
+---
+title: "Workshop: Something New"
+date: 2027-01-15
+type: workshop            # workshop | hackathon | community | talk
+location: "VinUniversity, Hanoi"
+summary: "One or two sentences shown on cards."
+cover: "03.jpg"           # optional; defaults to the first image in the folder
+dateLabel: "January 2027" # optional; overrides the formatted date
+role: "Host"              # optional badge
+featured: true            # optional; shows on the home page
+speakers:                 # optional
+  - name: "Speaker Name"
+    role: "Title, Company"
+---
 
-## Deploy on Vercel
+Markdown body goes here.
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Add an article
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create `content/articles/my-article.md`:
+
+```md
+---
+title: "Article title"
+date: 2027-01-20
+summary: "Shown on cards and under the title."
+tags: ["Recap"]
+cover: "01.jpg"   # a file in public/images/articles/my-article/, or a full /images/... path
+---
+
+Markdown body. Images: ![alt text](/images/articles/my-article/02.jpg)
+```
+
+### Update the team
+
+Edit `content/team/gen-N.json`. Remove `"placeholder": true` once a generation has people in it. Each person takes `name`, `role` and an optional `photo` path under `/images/...`; without a photo the card shows initials.
+
+### Open or close recruitment
+
+In `content/site.json`, set `recruitment.open` to `true`, and fill in `period`, `applyUrl` and `jobDescriptionUrl`.
+
+## Notes
+
+- `site.url` in `content/site.json` is a placeholder; set it to the real domain.
+- The bracket logo in `components/logo.tsx` is a hand-drawn stand-in for the official GDG logo.

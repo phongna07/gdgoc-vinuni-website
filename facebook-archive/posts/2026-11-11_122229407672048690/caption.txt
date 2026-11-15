@@ -1,0 +1,45 @@
+🎯 INTERVIEW TIPS: GET READY TO BUILD YOUR NEXT!
+━━━━━━━━━━━━━━━━━━
+Vòng phỏng vấn không chỉ là cơ hội để GDGoC-VinUni tìm kiếm những mảnh ghép phù hợp, mà còn là dịp để chúng mình hiểu hơn về bạn, những điều bạn quan tâm và mong muốn phát triển trong hành trình sắp tới.
+Vậy mỗi ban đang tìm kiếm điều gì ở ứng viên? Cần chuẩn bị gì để tự tin bước vào buổi phỏng vấn? Cùng khám phá một vài tips từ chính các ban nhé! 
+
+💻 TECH DEPARTMENT
+Điều chúng mình tìm kiếm:
+Ban Tech không chỉ đánh giá kỹ năng chuyên môn mà còn coi trọng thái độ làm việc và tinh thần học hỏi. Ứng viên cần nắm được kiến thức nền tảng của ít nhất một ngôn ngữ lập trình: Python hoặc JavaScript/TypeScript. Các kinh nghiệm về Web & Backend, AI & Data, Cloud & Dev Tools sẽ là điểm cộng, nhưng bạn không cần biết tất cả!
+
+💚Tips dành cho ứng viên:
+Review your CV: Hãy chuẩn bị chia sẻ sâu hơn về các dự án, vai trò, khó khăn và bài học bạn đã trải qua.
+Know your club: Tìm hiểu về GDGoC-VinUni, lý do bạn muốn tham gia và quỹ thời gian có thể dành cho CLB.
+Show your learning attitude: Nếu chưa có nhiều kinh nghiệm, một dự án nhỏ tự thực hiện hoặc cách bạn chủ động tìm tòi khi gặp vấn đề cũng là điểm cộng.
+Think out loud: Với câu hỏi tình huống, chúng mình quan tâm đến cách bạn tư duy và giải quyết vấn đề hơn là một đáp án hoàn hảo.
+
+⚙️ OPERATIONS & HR DEPARTMENT
+Điều chúng mình tìm kiếm:
+Ban Operations & HR tìm kiếm những thành viên có tinh thần trách nhiệm, sự tỉ mỉ, khả năng tổ chức, lên kế hoạch và xử lý tình huống linh hoạt. Sự chủ động, đúng hẹn và khả năng phối hợp với mọi người là những tố chất chúng mình đặc biệt trân trọng.
+
+💚Tips dành cho ứng viên:
+Understand the role: Đọc kỹ JD để hiểu công việc của ban và cách bạn có thể đóng góp vào việc vận hành các hoạt động chung.
+Think ahead: Thử hình dung những đầu việc cần thiết để tổ chức một sự kiện thành công và cách bạn phối hợp để hoàn thành chúng.
+Show your initiative: Chưa có nhiều kinh nghiệm không phải trở ngại. Sự chu đáo, chủ động, ham học hỏi và cởi mở kết nối đều là những điểm cộng.
+Share your experience: Nếu từng tham gia tổ chức sự kiện, hãy chia sẻ cụ thể vai trò, khó khăn và bài học bạn rút ra.
+Stay calm & logical: Với câu hỏi tình huống, không có đáp án đúng duy nhất. Chúng mình muốn hiểu cách bạn phân tích vấn đề, giữ bình tĩnh và tìm kiếm giải pháp.
+
+🎨 MARKETING & COMMUNICATIONS DEPARTMENT
+Điều chúng mình tìm kiếm:
+MarCom tìm kiếm những thành viên có tư duy sáng tạo, khả năng truyền tải thông điệp và sự nhạy bén trong việc quan sát, thấu hiểu đối tượng mục tiêu. Bên cạnh kỹ năng viết và thiết kế, tinh thần thử nghiệm, khả năng thích nghi và làm việc nhóm cũng rất quan trọng.
+
+💚Tips dành cho ứng viên:
+Think creatively: Đừng chỉ đưa ra ý tưởng mà hãy chia sẻ cách bạn phát triển ý tưởng và lý do đằng sau lựa chọn của mình.
+Know your message: Một sản phẩm đẹp chưa chắc đã hiệu quả nếu không truyền tải đúng thông điệp. Hãy suy nghĩ về điều bạn muốn người xem ghi nhớ.
+Understand your audience: Biết đặt mình vào vị trí người tiếp nhận và lựa chọn cách truyền thông phù hợp với từng nhóm đối tượng.
+Show your potential: Không cần portfolio chuyên nghiệp! Những bài viết, thiết kế, video hay project cá nhân đều có thể thể hiện khả năng của bạn.
+Stay curious: Hãy thể hiện sự quan tâm đến các xu hướng truyền thông, tinh thần sẵn sàng thử nghiệm và cởi mở với feedback
+
+Hẹn gặp các bạn tại vòng phỏng vấn của GDGoC-VinUni Gen 4!
+#GDGoCVinUni
+ ━━━━━━━━━━━━━━━━━━
+Mọi thông tin chi tiết vui lòng liên hệ/Contact Information:
+Hotline: 0942 852 923 (Head of Marketing and Communications)
+Email: gdsc.vinuni@gmail.com | s.gdgoncampus@vinuni.edu.vn
+Website: https://gdg.community.dev/gdg-on-campus-vinuniversity.../
+Fanpage: Google Developer Group on Campus - VinUniversity

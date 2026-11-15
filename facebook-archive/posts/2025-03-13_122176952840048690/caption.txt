@@ -1,0 +1,40 @@
+🚀Responsible AI: Nền tảng cho một tương lai AI bền vững 🤖
+------------------
+📌Đăng kí theo đội: https://tinyurl.com/GDGoCTeamRegistration
+📌Đăng kí cá nhân: https://tinyurl.com/GDGoCIndividualRegistration
+📌Booklet cuộc thi: https://tinyurl.com/GDGoCHackathonBooklet
+
+👨‍💻 Đối tượng tham gia: Sinh viên các trường Đại học, Cao đẳng trên toàn quốc.
+👥 Số lượng thành viên mỗi đội: 2 - 5 thành viên.
+
+⏰ Thời gian đăng ký:
+- Early Bird: 21/2 - 8/3/2025
+- Regular: 9/3 - 21/3/2025
+🔖 Hình thức vòng sơ khảo: Online
+-----------------------------
+Trong kỷ nguyên số hóa, AI đã trở thành một phần không thể thiếu trong cuộc sống, từ trợ lý ảo thông minh đến hệ thống tự động hóa phức tạp. Tuy nhiên, sự bùng nổ của AI cũng đặt ra nhiều thách thức về đạo đức, trách nhiệm và tính bền vững. Đó là lý do "Responsible AI" – AI có trách nhiệm – trở thành chủ đề cấp thiết cần được quan tâm từ mọi phía. 
+
+💡Vậy Responsible AI là gì? Đó là tập hợp các nguyên tắc và thực hành nhằm đảm bảo AI được phát triển và sử dụng một cách có đạo đức, minh bạch và mang lại lợi ích cho toàn xã hội. Để đạt được điều này, chúng ta cần tập trung vào 6 khía cạnh cốt lõi:
+
+⚖️ Công bằng & Giảm thiểu thiên vị:  Đảm bảo dữ liệu huấn luyện đa dạng, loại bỏ thiên vị và sử dụng các chỉ số đo lường công bằng.
+
+🔍 Rõ ràng & Trực quan: Người dùng cần hiểu cách AI ra quyết định và giới hạn của nó trong nghiên cứu thị trường. Ví dụ, công ty chi 500 triệu đồng quảng cáo dựa trên dự đoán AI (80% khách trẻ mua), nhưng chỉ đạt 40%, lỗ 200 triệu. Hiểu AI dùng dữ liệu ngắn hạn, họ có thể thử nghiệm nhỏ để giảm rủi ro, tăng lợi nhuận.
+
+👥 Trách nhiệm & Quản trị: Cần có đội ngũ chịu trách nhiệm giám sát rủi ro, quy trình đánh giá đạo đức và cơ chế phản hồi cho người dùng.
+
+🔒 Quyền riêng tư & Bảo mật: Tuân thủ luật bảo vệ dữ liệu, mã hóa dữ liệu người dùng và ngăn chặn truy cập trái phép.
+
+✅ Độ tin cậy & An toàn: Kiểm tra hệ thống AI trong điều kiện thực tế, có cơ chế dự phòng và giám sát liên tục.
+
+🌍 Tính toàn diện & Khả năng tiếp cận: Đảm bảo AI phục vụ mọi người, bao gồm cả người khuyết tật, và cân nhắc các yếu tố văn hóa, ngôn ngữ.
+
+Trong các dự án hackathon với thời gian và nguồn lực hạn chế, hãy ưu tiên những khía cạnh cốt lõi và đưa ra các quyết định thiết kế có trách nhiệm. Đảm bảo dữ liệu công bằng, hoạt động minh bạch, quản trị rõ ràng, bảo mật thông tin, hệ thống an toàn và phục vụ toàn diện là yếu tố then chốt cho một AI thực sự có trách nhiệm.
+
+🌟🤝Dựa trên những yếu tố đã đề cập, hãy kiến tạo một mô hình AI mang tính công bằng, minh bạch và an toàn. Cùng khơi nguồn cảm hứng sáng tạo, mang đến những giải pháp đột phá, và xây dựng tương lai công nghệ bền vững và có trách nhiệm.
+
+------------------
+Google Developer Groups On Campus - Hackathon Vietnam
+Fanpage: Google Developer Student Clubs - Hackathon Vietnam
+Email: hackathonvietnam.gdsc@gmail.com
+
+#GDGoC #Googlefordevelopers #GDGoCHackathon #google #hackathonvietnam

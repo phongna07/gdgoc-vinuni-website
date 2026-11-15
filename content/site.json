@@ -1,0 +1,95 @@
+{
+  "name": "GDG on Campus VinUniversity",
+  "shortName": "GDGoC VinUni",
+  "tagline": "Build your next.",
+  "description": "Google Developer Group on Campus at VinUniversity is a student community in Hanoi that learns, builds and ships with technology, as part of the global Google Developer Groups network.",
+  "url": "https://gdgoc-vinuni.example",
+  "version": "v4.0",
+  "generation": 4,
+  "foundedYear": 2023,
+  "email": [
+    "s.gdgoncampus@vinuni.edu.vn",
+    "gdsc.vinuni@gmail.com"
+  ],
+  "socials": [
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/gdgoc.vinuni"
+    },
+    {
+      "label": "GDG Community",
+      "href": "https://gdg.community.dev/gdg-on-campus-vinuniversity-hanoi-vietnam/"
+    }
+  ],
+  "location": "VinUniversity, Vinhomes Ocean Park, Gia Lam, Hanoi, Vietnam",
+  "stats": [
+    {
+      "value": "2023",
+      "label": "Chapter founded"
+    },
+    {
+      "value": "4",
+      "label": "Generations of members"
+    },
+    {
+      "value": "15+",
+      "label": "Events hosted, co-hosted or joined"
+    },
+    {
+      "value": "98",
+      "label": "Teams in GDGoC Hackathon Vietnam 2025"
+    }
+  ],
+  "pillars": [
+    {
+      "title": "Build your next self",
+      "text": "Keep learning, find out what you are good at, and grow through things you have not tried before."
+    },
+    {
+      "title": "Build your next idea",
+      "text": "Take an idea off the page, test it, and turn it step by step into a product that matters."
+    },
+    {
+      "title": "Build your next generation",
+      "text": "Join the next generation of GDGoC VinUni: curious students who learn together and build the future of tech."
+    }
+  ],
+  "recruitment": {
+    "open": false,
+    "generation": 4,
+    "period": "29 Oct – 8 Nov 2026",
+    "applyUrl": "",
+    "jobDescriptionUrl": "",
+    "closedMessage": "Applications for Gen 4 closed on 8 November 2026. Follow our Facebook page to hear about the next round.",
+    "steps": [
+      {
+        "title": "Application",
+        "text": "Fill in the online form and pick the station that fits you."
+      },
+      {
+        "title": "Email results",
+        "text": "Every applicant hears back by email. Check Spam and Promotions too."
+      },
+      {
+        "title": "Interview",
+        "text": "A conversation with the department you applied to. We care about how you think more than a perfect answer."
+      },
+      {
+        "title": "Welcome",
+        "text": "Final results, onboarding, and your first project with the team."
+      }
+    ]
+  },
+  "photoWall": [
+    "/images/events/workshop-ai-ml-for-sdgs/01.jpg",
+    "/images/events/club-fair-2024/08.jpg",
+    "/images/events/hackathon-vietnam-2025-demo-day-north/02.jpg",
+    "/images/events/cecs-day-2024/05.jpg",
+    "/images/events/hackathon-vietnam-2025-national-final/10.jpg",
+    "/images/events/hkust-sharing-session/02.jpg",
+    "/images/events/startup-showcase-entreprep-2023/02.jpg",
+    "/images/events/workshop-software-development-for-sdgs/06.jpg",
+    "/images/events/hackathon-vietnam-2025-national-final/15.jpg",
+    "/images/events/club-fair-2024/06.jpg"
+  ]
+}

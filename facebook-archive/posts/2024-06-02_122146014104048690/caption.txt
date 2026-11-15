@@ -1,0 +1,38 @@
+[Background]
+Người phỏng vấn: Chị Yến, chị có thể chia sẻ thêm về lý do tại sao ban đầu chị lại chọn theo đuổi ngành BA (Business Analytics) không?
+
+Chị Yến: Lúc đó, khi quyết định chọn ngành vào đại học, có rất ít bạn nữ xung quanh chị chọn các ngành STEM. Mặc dù chị học rất tốt các môn tự nhiên, nhưng vì một lý do nào đó, chị không chọn theo đuổi chúng ở Đại học. 🤔
+
+Người phỏng vấn: Vậy trong quá trình học thêm ngành phụ AI (Artificial Intelligence), chị gặp khó khăn nhất là điều gì?
+
+Chị Yến: Cũng không phải là những khó khăn quá lớn đâu. Tại VinUniversity, chị có thể học môn từ các ngành khác nhau, nên dù học BA, chị cũng có thể tham gia lớp toán và lập trình để theo đuổi ngành phụ AI. 👍
+
+[Role as a GDSC Leader]
+
+Người phỏng vấn: Những dự án nào mà chị thấy thú vị nhất khi còn đảm nhiệm vai trò GDSC Leader?
+
+Chị Yến: Có lẽ là khi tổ chức GDSC Hackathon Vietnam 2024. GDSC VinUni chỉ mới thành lập năm đầu tiên đã được chọn làm địa điểm tổ chức Hackathon. Duy trì một dự án với quy mô như vậy trong thời gian học tập ở nước ngoài thực sự là một trải nghiệm khó quên. Mặc dù khó khăn, nhưng chị tin mình và các thành viên trong Ban tổ chức GDSC Hackathon Vietnam đã hoàn thành xuất sắc. 🏆🥳
+
+Người phỏng vấn: Trong quá trình hoàn thiện GDSC Hackathon Vietnam, niềm vui lớn nhất của chị là gì?
+
+Chị Yến: Khi nhìn vào danh sách các đội thi và khán giả tại sự kiện, chị rất vui khi nhận ra rằng tỷ lệ nam nữ đã trở nên tương đối đồng đều. Điều này thực sự là một cảm hứng lớn cho chị, và chị mong muốn rằng sự đa dạng giới tính này sẽ tiếp tục được duy trì và phát triển trong các Hackathon ở những năm tiếp theo. Đó là một bước quan trọng, một sự thay đổi tích cực trong hành trình của chị. 🙌🥳
+
+____
+[Background]
+Interviewer: Yen, could you share more about why you initially chose to pursue the BA (Business Analytics) major?
+
+Yen: At the time, when deciding on a major for university, there were very few female friends around me who chose STEM fields. Although I was very good at natural science subjects, for some reason, I did not choose to pursue them in university. 🤔
+
+Interviewer: So in the process of pursuing a minor in AI, what was the biggest challenge you faced?
+
+Yen: It wasn't really that big of a challenge. At VinUniversity, I could take courses from different majors, so even though I was studying economics, I could still take math and programming courses to pursue the AI minor. 👍
+
+[Role as a GDSC Leader]
+
+Interviewer: What projects did you find most interesting when you were serving as a GDSC Leader?
+
+Yen: Perhaps it was when organizing the GDSC Hackathon Vietnam 2024. GDSC VinUni, which was only established in its first year, was selected as the host venue for the Hackathon. Maintaining a project of such scale during my overseas studies was truly an unforgettable experience. Although it was challenging, I believe that my team and I in the GDSC Hackathon Vietnam Organizing Committee were able to execute it successfully. 🏆🥳
+
+Interviewer: What was your greatest joy during the process of completing the GDSC Hackathon Vietnam?
+
+Yen: When looking at the list of competing teams and the audience at the event, I was very pleased to see that the male-to-female ratio had become relatively balanced. This was truly a great inspiration for me, and I hope that this gender diversity will continue to be maintained and developed in the Hackathons in the years to come. This was an important step, a positive change in my journey.🙌🥳

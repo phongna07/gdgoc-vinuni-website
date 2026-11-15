@@ -1,69 +1,338 @@
 import Image from "next/image";
+import Link from "next/link";
+import { HeroBlocks } from "@/components/hero-blocks";
+import {
+  ACCENT_BG,
+  ACCENT_SOFT,
+  ArticleCard,
+  EventCard,
+  JoinBanner,
+  SectionHeading,
+} from "@/components/ui";
+import {
+  departments,
+  formatMonth,
+  getArticles,
+  getEvents,
+  getPhotoWall,
+  site,
+  timeline,
+} from "@/lib/content";
 
-export default function Home() {
+const TICKER = ["Learn", "Build", "Connect", "Ship", "Workshops", "Hackathons", "Study jams", "Community"];
+
+export default function HomePage() {
+  const events = getEvents();
+  const featured = events.filter((e) => e.featured);
+  const [lead, ...rest] = featured.length ? featured : events;
+  const articles = getArticles().slice(0, 3);
+  const wall = getPhotoWall();
+  const { recruitment } = site;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      {/* ---------- hero ---------- */}
+      <section className="relative overflow-hidden border-b-2 border-ink">
+        <div className="wrap pb-16 pt-8 md:pb-24 md:pt-10">
+          <div className="mono flex items-center justify-between text-[0.7rem] uppercase tracking-widest text-muted">
+            <span>{"> initializing next_generation..."}</span>
+            <span className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-g-green" aria-hidden="true" />
+              {site.version} {"// online"}
+            </span>
+          </div>
+
+          <div className="crop mt-6 grid items-end gap-12 px-1 py-8 md:mt-8 md:py-12 lg:grid-cols-[1.25fr_1fr]">
+            <div>
+              <p className="rise mono inline-flex items-center gap-2 rounded-full border-2 border-ink bg-white px-3 py-1.5 text-[0.7rem] uppercase tracking-widest">
+                <span className="rounded-full bg-g-yellow px-1.5 font-bold">GEN 0{site.generation}</span>
+                Google Developer Group on Campus · VinUniversity
+              </p>
+
+              <h1 className="display mt-7 text-[clamp(4.2rem,15.5vw,12.5rem)] uppercase">
+                <span className="rise block">Build</span>
+                <span className="rise block" style={{ animationDelay: "0.08s" }}>
+                  Your
+                </span>
+                <span className="rise block text-g-blue" style={{ animationDelay: "0.16s" }}>
+                  Next<span className="cursor text-ink">_</span>
+                </span>
+              </h1>
+
+              <p className="rise mt-8 max-w-xl text-lg leading-relaxed text-muted md:text-xl" style={{ animationDelay: "0.3s" }}>
+                We are the student developer community at VinUniversity. We learn new technology, build real things
+                with it, and do it together.
+              </p>
+
+              <div className="rise mt-9 flex flex-wrap gap-4" style={{ animationDelay: "0.4s" }}>
+                <Link href="/join" className="btn btn-blue">
+                  {recruitment.open ? "Apply now" : "Join us"} <span aria-hidden="true">→</span>
+                </Link>
+                <Link href="/events" className="btn btn-white">
+                  See our events
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-start gap-8 lg:items-end">
+              <HeroBlocks />
+              <div className="w-full max-w-[26rem]">
+                <p className="mono text-sm">
+                  <span className="text-g-blue">{">"}</span> build(<span className="text-g-red">your</span>.
+                  <span className="text-g-green">next</span>)
+                </p>
+                <div className="mt-3 h-3 overflow-hidden rounded-full border-2 border-ink bg-white">
+                  <div className="load-bar h-full bg-g-blue" />
+                </div>
+                <p className="mono mt-2 flex justify-between text-[0.65rem] uppercase tracking-widest text-muted">
+                  <span>gen {site.generation} loaded</span>
+                  <span>100%</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- ticker ---------- */}
+      <div className="overflow-hidden border-b-2 border-ink bg-ink py-3.5 text-white" aria-hidden="true">
+        <div className="marquee flex w-max">
+          {[0, 1].map((n) => (
+            <div key={n} className="flex shrink-0 items-center">
+              {TICKER.map((word, i) => (
+                <span key={word} className="display flex items-center text-2xl uppercase md:text-3xl">
+                  <span className="px-6">{word}</span>
+                  <span
+                    className={`h-3.5 w-3.5 rounded-[4px] ${["bg-g-blue", "bg-g-red", "bg-g-yellow", "bg-g-green"][i % 4]}`}
+                  />
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ---------- who we are ---------- */}
+      <section className="wrap mt-24">
+        <SectionHeading index="01" label="who we are" title={<>A community that learns by building.</>}>
+          {site.description}
+        </SectionHeading>
+
+        <div className="grid gap-5 md:grid-cols-3">
+          {site.pillars.map((p, i) => (
+            <article
+              key={p.title}
+              data-reveal
+              className="card p-6 md:p-7"
+              style={{ animationDelay: `${i * 60}ms` }}
+            >
+              <span
+                className={`mono inline-flex h-9 w-9 items-center justify-center rounded-lg border-2 border-ink text-sm font-bold ${
+                  ["bg-g-yellow", "bg-g-red text-white", "bg-g-green text-white"][i % 3]
+                }`}
+              >
+                {i + 1}
+              </span>
+              <h3 className="display mt-5 text-2xl">{p.title}</h3>
+              <p className="mt-3 leading-relaxed text-muted">{p.text}</p>
+            </article>
+          ))}
+        </div>
+
+        <dl data-reveal className="card mt-5 grid grid-cols-2 overflow-hidden md:grid-cols-4">
+          {site.stats.map((s, i) => (
+            <div
+              key={s.label}
+              className={`p-6 md:p-7 ${i % 2 === 1 ? "border-l-2 border-ink" : ""} ${
+                i >= 2 ? "border-t-2 border-ink md:border-t-0" : ""
+              } ${i === 2 ? "md:border-l-2" : ""}`}
+            >
+              <dt className="mono order-2 text-[0.7rem] uppercase tracking-widest text-muted">{s.label}</dt>
+              <dd className="display mt-2 text-5xl md:text-6xl">{s.value}</dd>
+            </div>
+          ))}
+        </dl>
+
+        <p data-reveal className="mt-8">
+          <Link href="/about" className="mono text-sm uppercase tracking-wider underline decoration-2 underline-offset-4 hover:text-g-blue">
+            Read our story →
+          </Link>
+        </p>
+      </section>
+
+      {/* ---------- stations ---------- */}
+      <section className="wrap mt-28">
+        <SectionHeading
+          index="02"
+          label="four stations"
+          title={<>Find the station where you build.</>}
+          action={
+            <Link href="/join" className="btn btn-white">
+              How to join <span aria-hidden="true">→</span>
+            </Link>
+          }
+        >
+          Every member finds a role that fits. Three departments run the club, and a fourth station keeps the door
+          open to anyone who wants to learn with us.
+        </SectionHeading>
+
+        <div className="grid gap-5 sm:grid-cols-2">
+          {departments.map((d) => (
+            <Link
+              key={d.id}
+              href={`/join#${d.id}`}
+              data-reveal
+              className={`card card-link group flex flex-col p-6 md:p-8 ${ACCENT_SOFT[d.color]}`}
+            >
+              <div className="flex items-start justify-between">
+                <span className={`chip !border-2 ${ACCENT_BG[d.color]} ${d.color === "yellow" ? "" : "!text-white"}`}>
+                  Station {d.station}
+                </span>
+                <span className="display text-6xl text-ink/15 md:text-7xl" aria-hidden="true">
+                  {d.station}
+                </span>
+              </div>
+              <h3 className="display mt-2 text-3xl md:text-[2.6rem]">{d.name}</h3>
+              <p className="mt-4 max-w-md leading-relaxed text-ink/75">{d.summary}</p>
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {d.tracks.map((t) => (
+                  <li key={t} className="chip">
+                    {t}
+                  </li>
+                ))}
+              </ul>
+              <p className="mono mt-auto pt-7 text-xs uppercase tracking-wider">
+                Open station{" "}
+                <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ---------- events ---------- */}
+      <section className="wrap mt-28">
+        <SectionHeading
+          index="03"
+          label="events"
+          title={<>What we have shipped so far.</>}
+          action={
+            <Link href="/events" className="btn btn-white">
+              All {events.length} events <span aria-hidden="true">→</span>
+            </Link>
+          }
+        >
+          Workshops with engineers from industry, a national hackathon hosted on our campus, and evenings where the
+          only agenda is to share what we know.
+        </SectionHeading>
+
+        <div className="grid gap-5 lg:grid-cols-[1.35fr_1fr]">
+          {lead && (
+            <div data-reveal>
+              <EventCard event={lead} large />
+            </div>
+          )}
+          <ul className="flex flex-col gap-5">
+            {rest.slice(0, 4).map((e) => (
+              <li key={e.slug} data-reveal>
+                <Link href={`/events/${e.slug}`} className="card card-link group flex items-stretch overflow-hidden">
+                  <div className="relative w-28 shrink-0 border-r-2 border-ink bg-soft-blue sm:w-40">
+                    {e.cover && (
+                      <Image src={e.cover.src} alt="" fill sizes="160px" className="object-cover" />
+                    )}
+                  </div>
+                  <div className="min-w-0 p-4 sm:p-5">
+                    <p className="mono text-[0.7rem] uppercase tracking-wider text-muted">{e.dateLabel}</p>
+                    <h3 className="display mt-1.5 text-xl !leading-[1.08] sm:text-2xl">{e.title}</h3>
+                    <p className="mt-1.5 line-clamp-2 text-sm text-muted">{e.summary}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ---------- timeline ---------- */}
+      <section className="mt-28 border-y-2 border-ink bg-white/70 py-20">
+        <div className="wrap">
+          <SectionHeading index="04" label="git log" title={<>From GDSC to Gen {site.generation}.</>}>
+            A short commit history of the chapter, from the first post in September {site.foundedYear} to today.
+          </SectionHeading>
+        </div>
+
+        <div className="overflow-x-auto pb-6 [scrollbar-width:thin]">
+          <ol className="wrap flex w-max min-w-full gap-5 !max-w-none md:!px-[max(2rem,calc((100vw-76rem)/2+2rem))]">
+            {timeline.map((m, i) => (
+              <li key={m.date + m.tag} className="relative w-72 shrink-0 pt-8">
+                <span className="absolute left-0 right-[-1.25rem] top-[0.7rem] h-0.5 bg-ink" aria-hidden="true" />
+                <span
+                  className={`absolute left-0 top-0 h-6 w-6 rounded-md border-2 border-ink ${ACCENT_BG[m.color]}`}
+                  aria-hidden="true"
+                />
+                <p className="mono mt-3 text-xs uppercase tracking-wider text-muted">
+                  <span className="text-ink">{formatMonth(m.date)}</span> · {m.tag}
+                </p>
+                <h3 className="display mt-2 text-2xl !leading-[1.05]">{m.title}</h3>
+                <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">{m.text}</p>
+                <p className="mono mt-3 text-[0.65rem] text-ink/30">commit {String(i + 1).padStart(2, "0")}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ---------- articles ---------- */}
+      <section className="wrap mt-28">
+        <SectionHeading
+          index="05"
+          label="articles"
+          title={<>Stories from the community.</>}
+          action={
+            <Link href="/articles" className="btn btn-white">
+              All articles <span aria-hidden="true">→</span>
+            </Link>
+          }
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {articles.map((a, i) => (
+            <div key={a.slug} data-reveal style={{ animationDelay: `${i * 60}ms` }}>
+              <ArticleCard article={a} />
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ---------- photo wall ---------- */}
+      {wall.length > 0 && (
+        <section className="wrap mt-28">
+          <SectionHeading index="06" label="photo wall" title={<>Faces behind the code.</>} />
+          <div className="columns-2 gap-4 md:columns-3 lg:columns-4 [&>*]:mb-4">
+            {wall.map((img, i) => (
+              <figure
+                key={img.src}
+                data-reveal
+                className={`break-inside-avoid overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-[4px_4px_0_0_var(--ink)] ${
+                  i % 3 === 0 ? "rotate-[-1.2deg]" : i % 3 === 1 ? "rotate-[0.8deg]" : ""
+                }`}
+              >
+                <Image
+                  src={img.src}
+                  alt="GDGoC VinUni members at a club event"
+                  width={img.width}
+                  height={img.height}
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                  className="h-auto w-full"
+                />
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <JoinBanner open={recruitment.open} period={recruitment.period} generation={recruitment.generation} />
+    </>
   );
 }

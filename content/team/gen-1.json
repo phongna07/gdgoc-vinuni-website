@@ -1,0 +1,27 @@
+{
+  "generation": 1,
+  "term": "2023 – 2024",
+  "name": "GDSC VinUni",
+  "note": "The founding generation, when the club was still called Google Developer Student Club VinUniversity.",
+  "leads": [
+    { "name": "Lưu Bảo Yến", "role": "GDSC Lead", "photo": "/images/team/gen-1/lead-1.jpg" },
+    { "name": "Nguyễn Trường Tùng", "role": "Tech Lead · AI", "photo": "/images/team/gen-1/lead-2.jpg" },
+    { "name": "Trương Khánh Linh", "role": "Tech & Media Lead · Web & Design", "photo": "/images/team/gen-1/lead-3.jpg" },
+    { "name": "Phạm Trần Vũ Đạt", "role": "HR Lead", "photo": "/images/team/gen-1/lead-4.jpg" },
+    { "name": "Lê Thị Minh Ngọc", "role": "Media Lead · Content", "photo": "/images/team/gen-1/lead-5.jpg" },
+    { "name": "Nguyễn Ngọc Minh", "role": "External Relations Lead · Finance", "photo": "/images/team/gen-1/lead-6.jpg" },
+    { "name": "Lê Phương Linh", "role": "External Relations Lead · Commune", "photo": "/images/team/gen-1/lead-7.jpg" }
+  ],
+  "advisors": [
+    { "name": "Thomas Oikonomou", "role": "Advisor", "photo": "/images/team/gen-1/advisor-1.jpg" },
+    { "name": "Prof. Kok-Seng Wong", "role": "Advisor · College of Engineering and Computer Science", "photo": "/images/team/gen-1/advisor-2.jpg" }
+  ],
+  "teams": [
+    { "name": "Tech · Web", "members": ["Lê Ngọc Toàn", "Trần Tất Hưng", "Nguyễn Minh Khoa", "Cao Lâm Huy", "Châu Quế Chi"] },
+    { "name": "Tech · AI", "members": ["Nguyễn Tiến Nhân", "Trần Lê Hải", "Phạm Ngọc Phú Vinh", "Lê Mai Thanh Sơn", "Trần Bình Minh", "Trần Nam Nhật Anh", "Trịnh Tố Thảo Nhi"] },
+    { "name": "HR", "members": ["Bùi Hà Bảo Hưng", "Hoàng Anh Thư"] },
+    { "name": "Media", "members": ["Nguyễn Trung Hiếu", "Mai Hoàng Đức", "Dương Khánh Linh", "Dương Thục Anh"] },
+    { "name": "External Relations · Commune", "members": ["Lương Hoàng Ngọc Minh", "Đặng Bảo Ngọc", "Trần Thanh Vân"] },
+    { "name": "External Relations · Finance", "members": ["Bùi Anh Thư", "Nguyễn Ngọc Bảo Quyên", "Lê Hải Nhàn", "Nguyễn Ngọc Hoàng Bách"] }
+  ]
+}
