@@ -30,8 +30,8 @@
 
 :root {
   --ink: #141414;
-  --grid: rgba(20, 20, 20, 0.055);
-  --grid-strong: rgba(20, 20, 20, 0.09);
+  --grid: rgba(20, 20, 20, 0.03);
+  --grid-strong: rgba(20, 20, 20, 0.04);
   --wrap: 70rem;
 }
 
