@@ -99,9 +99,6 @@ export default async function EventPage({ params }: Props) {
       {event.gallery.length > 1 && (
         <section className="wrap mt-14">
           <h2 className="display text-3xl md:text-4xl">Photos</h2>
-          <p className="mono mt-2 text-xs uppercase tracking-widest text-muted">
-            {event.gallery.length} files in /images/events/{event.slug}
-          </p>
           <div className="mt-6">
             <Gallery images={event.gallery} title={event.title} />
           </div>

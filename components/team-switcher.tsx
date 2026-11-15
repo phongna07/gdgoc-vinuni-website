@@ -85,7 +85,6 @@ export function TeamSwitcher({ generations }: { generations: Generation[] }) {
             <p className="mt-3 max-w-xl text-muted">
               Names and photos for Generation {gen.generation} have not been added yet. Check back soon.
             </p>
-            <p className="mono mt-6 text-xs text-ink/40">content/team/gen-{gen.generation}.json</p>
           </div>
         ) : (
           <>
