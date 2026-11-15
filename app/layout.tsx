@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { site } from "@/lib/content";
+import { pageMetadata, siteUrl } from "@/lib/metadata";
 
 const body = Be_Vietnam_Pro({
   variable: "--font-body",
@@ -22,17 +23,11 @@ const code = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  ...pageMetadata({ path: "/", title: `${site.shortName} — ${site.tagline}` }),
+  metadataBase: siteUrl,
   title: {
     default: `${site.shortName} — ${site.tagline}`,
     template: `%s · ${site.shortName}`,
-  },
-  description: site.description,
-  openGraph: {
-    title: site.name,
-    description: site.description,
-    images: ["/images/brand/01.jpg"],
-    type: "website",
   },
 };
 

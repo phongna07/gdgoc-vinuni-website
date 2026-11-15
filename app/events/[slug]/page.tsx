@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Gallery } from "@/components/gallery";
@@ -17,11 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const event = getEvent(slug);
   if (!event) return {};
-  return {
+  return pageMetadata({
+    path: `/events/${slug}`,
     title: event.title,
     description: event.summary,
-    openGraph: { title: event.title, description: event.summary, images: event.cover ? [event.cover.src] : [] },
-  };
+    image: event.cover,
+  });
 }
 
 export default async function EventPage({ params }: Props) {

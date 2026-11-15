@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { TeamSwitcher } from "@/components/team-switcher";
 import { JoinBanner, PageHeader } from "@/components/ui";
 import { getGenerations, site } from "@/lib/content";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/team",
   title: "Team",
   description: "The people of GDG on Campus VinUniversity, generation by generation.",
-};
+});
 
 export default function TeamPage() {
   const generations = getGenerations();

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleCard, Frame } from "@/components/ui";
@@ -16,16 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) return {};
-  return {
+  return pageMetadata({
+    path: `/articles/${slug}`,
     title: article.title,
     description: article.summary,
-    openGraph: {
-      type: "article",
-      title: article.title,
-      description: article.summary,
-      images: article.cover ? [article.cover.src] : [],
-    },
-  };
+    image: article.cover,
+    type: "article",
+  });
 }
 
 export default async function ArticlePage({ params }: Props) {

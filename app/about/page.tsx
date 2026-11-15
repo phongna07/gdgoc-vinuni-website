@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { ACCENT_BG, JoinBanner, PageHeader, SectionHeading } from "@/components/ui";
 import { formatMonth, getGenerations, site, timeline } from "@/lib/content";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/about",
   title: "About",
   description: "The story, mission and milestones of GDG on Campus VinUniversity.",
-};
+});
 
 const WHAT_WE_DO = [
   { title: "Workshops & study jams", text: "Hands-on sessions with engineers from industry and with each other, from Android and Firebase to recommender systems and Gemini.", color: "bg-soft-blue" },

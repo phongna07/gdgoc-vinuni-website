@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ArticleCard, Frame, PageHeader } from "@/components/ui";
 import { getArticles } from "@/lib/content";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/articles",
   title: "Articles",
   description: "Stories, explainers and guides from GDG on Campus VinUniversity.",
-};
+});
 
 export default function ArticlesPage() {
   const [first, ...rest] = getArticles();

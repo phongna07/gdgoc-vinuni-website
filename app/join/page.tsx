@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ACCENT_BG, ACCENT_SOFT, PageHeader, SectionHeading } from "@/components/ui";
 import { departments, site } from "@/lib/content";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/join",
   title: "Join us",
   description: "The four stations of GDG on Campus VinUniversity and how recruitment works.",
-};
+});
 
 export default function JoinPage() {
   const r = site.recruitment;

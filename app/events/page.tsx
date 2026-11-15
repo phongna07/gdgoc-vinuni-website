@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { EventsExplorer } from "@/components/events-explorer";
 import { JoinBanner, PageHeader } from "@/components/ui";
 import { EVENT_TYPES, getEvents, site } from "@/lib/content";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/events",
   title: "Events",
   description: "Workshops, hackathons, talks and community days run or joined by GDG on Campus VinUniversity.",
-};
+});
 
 export default function EventsPage() {
   // keep the payload sent to the client filter small: no body HTML, no gallery

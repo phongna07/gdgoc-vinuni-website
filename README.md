@@ -28,6 +28,18 @@ All article and event URLs are generated from repository content at build time;
 adding or changing content requires a new deployment. Images are served directly
 from `public/` without the Next.js image optimization endpoint.
 
+## Social sharing metadata
+
+Set `SITE_URL` to the site's public, absolute URL (including `https://`) in the
+Cloudflare Pages build environment, then rebuild. Next.js uses it for canonical
+links and absolute Open Graph / Twitter image URLs. When unset, local development
+uses `http://localhost:3000`.
+
+The default sharing image is a 1200 × 630 capture of the homepage hero at
+`public/images/social-preview.png`. All pages include Open Graph metadata and a
+Twitter large-image card; article and event pages use their cover image when
+available and fall back to the homepage capture.
+
 ## Routes
 
 | Route | Source |
@@ -105,5 +117,4 @@ In `content/site.json`, set `recruitment.open` to `true`, and fill in `period`, 
 
 ## Notes
 
-- `site.url` in `content/site.json` is a placeholder; set it to the real domain.
 - The bracket logo in `components/logo.tsx` is a hand-drawn stand-in for the official GDG logo.
