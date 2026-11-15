@@ -35,22 +35,27 @@ export default function HomePage() {
       {/* ---------- hero ---------- */}
       <section className="relative overflow-hidden border-b-2 border-ink">
         <div className="wrap pb-12 pt-6 md:pb-16 md:pt-8">
-          <div className="mono flex items-center justify-between text-[0.7rem] uppercase tracking-widest text-muted">
-            <span>{"> initializing next_generation..."}</span>
-            <span className="flex items-center gap-2">
+          <div className="mono flex items-center justify-between gap-4 text-[0.7rem] uppercase tracking-widest text-muted">
+            <span className="truncate sm:hidden">{"> init next_gen..."}</span>
+            <span className="hidden sm:inline">{"> initializing next_generation..."}</span>
+            <span className="flex shrink-0 items-center gap-2 whitespace-nowrap">
               <span className="h-2 w-2 rounded-full bg-g-green" aria-hidden="true" />
               {site.version} {"// online"}
             </span>
           </div>
 
-          <div className="crop mt-5 grid items-end gap-10 px-1 py-6 md:mt-6 md:py-10 lg:grid-cols-[1.25fr_1fr]">
+          <div className="crop mt-5 grid items-end gap-9 px-1 py-7 sm:gap-10 sm:py-6 md:mt-6 md:py-10 lg:grid-cols-[1.25fr_1fr]">
             <div>
               <p className="rise mono inline-flex items-center gap-2 rounded-full border-2 border-ink bg-white px-3 py-1.5 text-[0.7rem] uppercase tracking-widest">
-                <span className="rounded-full bg-g-yellow px-1.5 font-bold">GEN 0{site.generation}</span>
-                Google Developer Group on Campus · VinUniversity
+                <span className="shrink-0 whitespace-nowrap rounded-full bg-g-yellow px-1.5 font-bold">
+                  GEN 0{site.generation}
+                </span>
+                <span>
+                  Google Developer Group<span className="hidden sm:inline"> on Campus · VinUniversity</span>
+                </span>
               </p>
 
-              <h1 className="display mt-6 text-hero uppercase">
+              <h1 className="display mt-6 text-hero uppercase max-sm:text-[clamp(3.5rem,18vw,4.75rem)]">
                 <span className="rise block">Build</span>
                 <span className="rise block" style={{ animationDelay: "0.08s" }}>
                   Your
@@ -75,17 +80,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex flex-col items-start gap-7 lg:items-end">
+            <div className="flex flex-row-reverse items-end justify-between gap-5 sm:flex-col sm:items-start sm:justify-start sm:gap-7 lg:items-end">
               <HeroBlocks />
-              <div className="w-full max-w-[19rem]">
-                <p className="mono text-[0.8rem]">
+              <div className="min-w-0 max-w-[19rem] flex-1 sm:w-full sm:flex-none">
+                <p className="mono whitespace-nowrap text-[0.7rem] sm:text-[0.8rem]">
                   <span className="text-g-blue">{">"}</span> build(<span className="text-g-red">your</span>.
                   <span className="text-g-green">next</span>)
                 </p>
                 <div className="mt-2.5 h-2.5 overflow-hidden rounded-full border-2 border-ink bg-white">
                   <div className="load-bar h-full bg-g-blue" />
                 </div>
-                <p className="mono mt-2 flex justify-between text-[0.65rem] uppercase tracking-widest text-muted">
+                <p className="mono mt-2 flex justify-between gap-2 whitespace-nowrap text-[0.6rem] uppercase tracking-wider text-muted sm:text-[0.65rem] sm:tracking-widest">
                   <span>gen {site.generation} loaded</span>
                   <span>100%</span>
                 </p>
